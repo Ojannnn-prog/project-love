@@ -842,20 +842,20 @@
     // STEP 3: Firebase hanya dipakai untuk Firestore database.
     // Firebase Console > Project settings > Your apps > Web app > SDK setup and configuration > Config.
     const firebaseConfig = {
-      apiKey: "AIzaSyBYl9myY4wyzzmgq1nAafY5n7NPi-e4QfM",
-      authDomain: "project-love-99b14.firebaseapp.com",
-      projectId: "project-love-99b14",
-      messagingSenderId: "985664523036",
-      appId: "1:985664523036:web:581bb432dfd4d2cbe8c8d9",
-      measurementId: "G-2JVY58YEWY"
+      apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+      authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+      projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+      messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+      appId: import.meta.env.VITE_FIREBASE_APP_ID,
+      measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
     };
 
     // STEP 3: Cloudinary dipakai untuk gambar dan musik.
     // Cloudinary Console > Settings > Upload > Upload presets > buat unsigned preset.
     // Jangan tempel API Secret di frontend karena source GitHub Pages bisa dibaca publik.
     const cloudinaryConfig = {
-      cloudName: "dxrjrtn2s",
-      unsignedUploadPreset: "galeri_romantis",
+      cloudName: import.meta.env.VITE_CLOUDINARY_CLOUD_NAME,
+      unsignedUploadPreset: import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET,
       imageFolder: "love-gallery",
       musicFolder: "love-music"
     };
